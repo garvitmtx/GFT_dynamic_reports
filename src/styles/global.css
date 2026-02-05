@@ -1,0 +1,68 @@
+/* ===== CSS RESET ===== */
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* Prevent phantom horizontal scroll */
+html,body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+/* Better font rendering */
+body{
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Images + SVG should NEVER overflow */
+img, svg{
+  max-width:100%;
+  display:block;
+}
+
+/* Text should wrap instead of stretching layout */
+h1,h2,h3,h4,p,span{
+  overflow-wrap:break-word;
+}
+
+/* Flex children must be allowed to shrink */
+div{
+  min-width:0;
+}
+
+:root{
+
+/* COLORS */
+
+--primary:#0F766E;
+--primary-soft:#E6F4F2;
+--text-dark:#0f172a;
+--text-light:#64748b;
+--border:#E5E7EB;
+--card-bg:#ffffff;
+
+/* SPACING (8px system) */
+
+--space-xs:8px;
+--space-sm:16px;
+--space-md:24px;
+--space-lg:32px;
+--space-xl:48px;
+
+/* RADIUS */
+
+--radius-sm:10px;
+--radius-md:16px;
+--radius-lg:22px;
+
+/* SHADOW (healthcare style — very soft) */
+
+--shadow-soft:
+0 4px 20px rgba(15, 118, 110, 0.06);
+
+}

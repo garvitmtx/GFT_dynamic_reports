@@ -1,0 +1,251 @@
+/* ===============================
+   NAVBAR ROOT
+================================ */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 clamp(16px,4vw,40px);
+
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #e6e6e6;
+
+    transition:box-shadow .25s ease;
+}
+
+
+/* shadow when scrolling */
+
+.navbar.scrolled{
+    box-shadow:0 6px 24px rgba(0,0,0,0.06);
+}
+
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo{
+    height:38px;
+    cursor:pointer;
+}
+
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.nav-links{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+    width:fit-content;  
+}
+
+
+
+/* buttons */
+
+.nav-links button{
+
+    background:none;
+    border:none;
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:500;
+
+    color:#555;
+
+    padding:8px 4px;
+
+    transition:color .25s ease;
+}
+
+.nav-links button:hover{
+    color:#0f766e;
+}
+
+.nav-links button.active{
+    color:#0f766e;
+}
+
+
+
+/* ===============================
+   SLIDING INDICATOR
+================================ */
+
+/* Update only this section in your navbar.css */
+.nav-indicator {
+    position: absolute;
+    bottom: -5px; /* Adjust based on your design */
+    left: -2px;      /* Keep at 0, we use transform to move it */
+    height: 3px;
+    width: 0;
+    background: #0f766e;
+    border-radius: 4px;
+    pointer-events: none; /* Prevents line from blocking clicks */
+    transition: 
+        transform .35s cubic-bezier(.4, 0, .2, 1), 
+        width .35s cubic-bezier(.4, 0, .2, 1);
+    z-index: -1
+}
+
+
+
+/* ===============================
+   SIGN IN BUTTON
+================================ */
+
+.signin-btn{
+
+    background:#0f766e;
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+    border-radius:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:all .25s ease;
+}
+
+.signin-btn:hover{
+    background:#0d5f59;
+    transform:translateY(-1px);
+}
+
+
+
+/* ===============================
+   HAMBURGER
+================================ */
+
+.hamburger{
+    display:none;
+
+    flex-direction:column;
+    gap:5px;
+
+    cursor:pointer;
+}
+
+.hamburger span{
+    width:24px;
+    height:3px;
+    background:#333;
+    border-radius:3px;
+
+    transition:all .25s ease;
+}
+
+
+/* animate to X */
+
+.hamburger.open span:nth-child(1){
+    transform:rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.open span:nth-child(3){
+    transform:rotate(-45deg) translateY(-8px);
+}
+
+
+
+/* ===============================
+   MOBILE DRAWER
+================================ */
+
+.mobile-drawer{
+
+    position:fixed;
+    top:72px;
+    right:0;
+
+    width:260px;
+    height:calc(100vh - 72px);
+
+    background:white;
+
+    padding:24px;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    box-shadow:-6px 0 24px rgba(0,0,0,0.08);
+
+    transform:translateX(100%);
+    transition:transform .35s cubic-bezier(.4,0,.2,1);
+
+    z-index:9998;
+}
+
+.mobile-drawer.show{
+    transform:translateX(0);
+}
+
+.mobile-drawer p{
+    cursor:pointer;
+    font-weight:500;
+}
+
+.mobile-drawer p:hover{
+    color:#0f766e;
+}
+
+
+
+/* ===============================
+   TABLET
+================================ */
+
+@media(max-width:1024px){
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .signin-btn{
+        padding:8px 14px;
+    }
+}
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .nav-links,
+    .signin-btn{
+        display:none;
+    }
+
+    .hamburger{
+        display:flex;
+    }
+}

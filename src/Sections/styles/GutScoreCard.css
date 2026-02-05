@@ -1,0 +1,286 @@
+/* Main Container */
+.gut-health-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.export-btn {
+  background-color: #4A7C7E;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+  background-color: #3d6668;
+}
+
+/* Score Banner */
+.score-banner {
+  background: linear-gradient(135deg, #D4E5E5 0%, #E8F2F2 100%);
+  border-radius: 16px 16px 0 0;
+  padding: 30px 30px;
+  /* margin-bottom: 20px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.score-info {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.analysis-date {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Score Visual */
+.score-visual {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.microbe-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overall-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+/* Circular Score */
+.score-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.score-number {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.score-label {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  /* padding-right: 60px; */
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.metric-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* Overall gut health metrics */
+.metric-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-name {
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a5568;
+  background-color: #f3f4f6;
+  padding: 6px 20px;
+  border-radius: 20px;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Ratio Bar */
+.ratio-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ratio-bar {
+  flex: 1;
+  height: 12px;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ratio-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4A7C7E 0%, #5BA3A3 100%);
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.ratio-bar-fill.toxins-bar {
+  background: linear-gradient(90deg, #6B7280 0%, #4B5563 100%);
+}
+
+.ratio-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  min-width: 50px;
+  text-align: right;
+}
+
+.ratio-value.toxins-value {
+  color: #DC2626;
+}
+
+.metric-description {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gut-health-container {
+    padding: 20px 15px;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .score-banner {
+    flex-direction: column;
+    padding: 30px 25px;
+    gap: 30px;
+  }
+
+  .score-visual {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .score-label {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .metrics-grid {
+    padding: 25px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .export-btn {
+    width: 100%;
+  }
+
+  .score-number {
+    font-size: 2.5rem;
+  }
+
+  .metric-title {
+    font-size: 1.1rem;
+  }
+}
