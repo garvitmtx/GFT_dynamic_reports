@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import '../styles/GenusLevelinfo.css';
+import '../styles/Genuslevelinfo.css';
 
 // Dummy JSON data
 const dummyData = {
