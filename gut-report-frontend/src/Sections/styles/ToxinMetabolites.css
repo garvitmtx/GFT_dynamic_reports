@@ -1,0 +1,466 @@
+/* Toxins and Metabolites Container */
+.toxins-metabolites-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Section Block */
+.section-block {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.section-block:last-child {
+  margin-bottom: 0;
+}
+
+/* Section Title */
+.section-main-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 30px 0;
+}
+
+/* Tabs Container */
+.tabs-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Tab Button */
+.tab-button {
+  padding: 12px 28px;
+  border: 1px solid #d1d5db;
+  border-radius: 24px;
+  background-color: #ffffff;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  border-color: #4A7C7E;
+  color: #4A7C7E;
+}
+
+.tab-button.active {
+  background-color: #D4E5E5;
+  border-color: #4A7C7E;
+  color: #1a5f5f;
+  font-weight: 600;
+}
+
+.tab-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 124, 126, 0.2);
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* Info Card */
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #4A7C7E;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Card Overview */
+.card-overview {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+/* Card Functions */
+.card-functions {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+/* Card Percentile Text */
+.card-percentile-text {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+/* Percentile Bar Container */
+.percentile-bar-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.percentile-bar {
+  width: 100%;
+}
+
+/* Percentile Scale */
+.percentile-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.scale-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Percentile Track */
+.percentile-track {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, 
+    #4A7C7E 0%, 
+    #5BA3A3 50%, 
+    #4A7C7E 100%
+  );
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Percentile Marker */
+.percentile-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.marker-label {
+  position: absolute;
+  top: -28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  background-color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Percentile Caption */
+.percentile-caption {
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* No Data Message */
+.no-data-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.no-data-message p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section-main-title {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toxins-metabolites-container {
+    padding: 30px 16px;
+  }
+
+  .section-block {
+    margin-bottom: 50px;
+  }
+
+  .section-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .tabs-container {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .tab-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+  }
+
+  .card-overview {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .card-functions {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+  }
+
+  .card-percentile-text {
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+  }
+
+  .marker-label {
+    font-size: 0.8rem;
+    top: -26px;
+  }
+
+  .marker-dot {
+    width: 14px;
+    height: 14px;
+    border-width: 2.5px;
+  }
+
+  .no-data-message {
+    padding: 50px 20px;
+  }
+
+  .no-data-message p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toxins-metabolites-container {
+    padding: 24px 12px;
+  }
+
+  .section-block {
+    margin-bottom: 40px;
+  }
+
+  .section-main-title {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+  }
+
+  .tabs-container {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .tab-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .cards-grid {
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .card-overview {
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+  }
+
+  .card-functions {
+    font-size: 0.825rem;
+    margin-bottom: 10px;
+  }
+
+  .card-percentile-text {
+    font-size: 0.825rem;
+    margin-bottom: 14px;
+  }
+
+  .scale-label {
+    font-size: 0.75rem;
+  }
+
+  .percentile-track {
+    height: 6px;
+  }
+
+  .marker-label {
+    font-size: 0.75rem;
+    top: -24px;
+    padding: 1px 6px;
+  }
+
+  .marker-dot {
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+
+  .percentile-caption {
+    font-size: 0.75rem;
+  }
+
+  .no-data-message {
+    padding: 40px 16px;
+  }
+
+  .no-data-message p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+.toxins-metabolites-container,
+.section-block,
+.tabs-container,
+.cards-grid,
+.info-card,
+.percentile-bar-container,
+.percentile-bar,
+.percentile-track {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-card {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.info-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.info-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.info-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.info-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+/* Accessibility */
+.tab-button:focus-visible {
+  outline: 2px solid #4A7C7E;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .tabs-container {
+    display: none;
+  }
+
+  .info-card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .section-block {
+    page-break-after: always;
+  }
+}

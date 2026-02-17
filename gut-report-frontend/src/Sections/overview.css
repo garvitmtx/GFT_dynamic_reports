@@ -1,0 +1,32 @@
+/* *{
+	overflow-x: hidden;
+} */
+
+.overview-container{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.overview-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.export-btn{
+    background:#0f766e;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .overview-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+}

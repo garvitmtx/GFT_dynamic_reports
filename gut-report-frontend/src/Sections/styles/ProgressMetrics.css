@@ -1,0 +1,55 @@
+.metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.metric-card{
+    background:var(--card-bg);
+    border-radius:var(--radius-md);
+    padding:var(--space-md);
+
+    box-shadow:var(--shadow-soft);
+
+    border:1px solid var(--border);
+
+    transition:0.25s;
+}
+
+.metric-card:hover{
+    transform:translateY(-4px);
+}
+
+
+.metric-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+}
+
+.progress-bar{
+    height:12px;
+    background:#EDF2F7;
+    border-radius:20px;
+}
+
+.progress-fill{
+    background:linear-gradient(
+        90deg,
+        #0F766E,
+        #14B8A6
+    );
+}
+
+
+@media(max-width:1024px){
+    .metrics-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+    .metrics-grid{
+        grid-template-columns:1fr;
+    }
+}

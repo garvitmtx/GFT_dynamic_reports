@@ -1,0 +1,546 @@
+/* Top Microbes Container */
+.top-microbes-container {
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.microbes-header {
+  margin-bottom: 30px;
+}
+
+.header-text {
+  max-width: 100%;
+}
+
+.microbes-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.microbes-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Controls Wrapper */
+.controls-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* Search Wrapper */
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4A7C7E;
+  box-shadow: 0 0 0 3px rgba(74, 124, 126, 0.1);
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Filter Wrapper */
+.filter-wrapper {
+  position: relative;
+  min-width: 180px;
+}
+
+.filter-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 48px 12px 48px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #4A7C7E;
+  box-shadow: 0 0 0 3px rgba(74, 124, 126, 0.1);
+}
+
+.filter-select:hover {
+  border-color: #4A7C7E;
+}
+
+/* Microbes Content */
+.microbes-content {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* No Data State */
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.no-data-icon {
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-data-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 0 0 8px 0;
+}
+
+.no-data-subtext {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Microbes Section */
+.microbes-section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+/* Microbes List */
+.microbes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Microbe Card */
+.microbe-card {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.microbe-card:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Microbe Info */
+.microbe-info {
+  flex: 0 0 auto;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.microbe-genus {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.microbe-functions {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Microbe Bar Container */
+.microbe-bar-container {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.microbe-bar {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  float: right;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-segment {
+  /* width: 50px; */
+  height: 100%;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.bar-segment:first-of-type {
+  border-radius: 6px 0 0 6px;
+}
+
+.bar-segment:last-of-type {
+  border-radius: 0 6px 6px 0;
+}
+
+/* Bar Marker */
+.bar-marker {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  bottom: -8px;
+  width: 2px;
+  background-color: #1a1a1a;
+  z-index: 10;
+  border-radius: 2px;
+}
+
+.bar-marker::before,
+.bar-marker::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 50%;
+}
+
+.bar-marker::before {
+  top: -6px;
+}
+
+.bar-marker::after {
+  bottom: -6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .microbes-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .microbe-card {
+    gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  }
+
+  .microbe-info {
+    min-width: 240px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-microbes-container {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .microbes-header {
+    margin-bottom: 24px;
+  }
+
+  .microbes-title {
+    font-size: 1.35rem;
+  }
+
+  .microbes-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .controls-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .search-wrapper {
+    min-width: 100%;
+  }
+
+  .filter-wrapper {
+    min-width: 100%;
+  }
+
+  .microbes-content {
+    gap: 32px;
+    min-height: 350px;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .microbe-card {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .microbe-info {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .microbe-genus {
+    font-size: 1.05rem;
+  }
+
+  .microbe-functions {
+    font-size: 0.875rem;
+  }
+
+  .microbe-bar-container {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .microbe-bar {
+    height: 28px;
+  }
+
+  .no-data {
+    padding: 60px 20px;
+  }
+
+  .no-data-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-microbes-container {
+    padding: 0 12px;
+    margin: 30px auto;
+  }
+
+  .microbes-title {
+    font-size: 1.2rem;
+  }
+
+  .microbes-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .search-input,
+  .filter-select {
+    padding: 10px 16px 10px 44px;
+    font-size: 0.9rem;
+  }
+
+  .search-icon,
+  .filter-icon,
+  .dropdown-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .microbes-content {
+    gap: 28px;
+    min-height: 300px;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+  }
+
+  .microbe-card {
+    padding: 16px;
+    gap: 14px;
+    border-radius: 10px;
+  }
+
+  .microbe-genus {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .microbe-functions {
+    font-size: 0.825rem;
+  }
+
+  .microbe-bar {
+    height: 24px;
+  }
+
+  .bar-marker {
+    width: 1.5px;
+  }
+
+  .bar-marker::before,
+  .bar-marker::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .no-data {
+    padding: 50px 16px;
+  }
+
+  .no-data-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .no-data-text {
+    font-size: 1.1rem;
+  }
+
+  .no-data-subtext {
+    font-size: 0.875rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+.top-microbes-container,
+.controls-wrapper,
+.microbes-content,
+.microbes-section,
+.microbes-list,
+.microbe-card,
+.microbe-bar-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Accessibility */
+.search-input:focus-visible,
+.filter-select:focus-visible {
+  outline: 2px solid #4A7C7E;
+  outline-offset: 2px;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.microbe-card {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.microbe-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.microbe-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.microbe-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.microbe-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.microbe-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+/* Print Styles */
+@media print {
+  .controls-wrapper {
+    display: none;
+  }
+
+  .microbe-card {
+    page-break-inside: avoid;
+  }
+}
