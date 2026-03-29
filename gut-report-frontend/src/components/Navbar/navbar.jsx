@@ -1,12 +1,13 @@
 import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.png";
+import {useNavigate} from "react-router-dom";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("overview");
-
+  const navigate = useNavigate();
   const navRefs = useRef({});
   const indicatorRef = useRef(null);
   const navContainerRef = useRef(null);
@@ -125,7 +126,7 @@ useEffect(() => {
           ))}
         </ul>
 
-        <button className="signin-btn">Sign In</button>
+       <button onClick={() => navigate("/signin")} className="signin-btn"> Sign Out </button>
 
         <div className={`hamburger ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
           <span /><span /><span />

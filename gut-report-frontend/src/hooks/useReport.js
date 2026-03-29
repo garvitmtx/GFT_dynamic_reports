@@ -1,42 +1,54 @@
 import { useEffect, useState } from "react";
 
-export default function useReport(token){
+export default function useReport() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    const [data,setData] = useState(null);
-    const [loading,setLoading] = useState(true);
-    const [error,setError] = useState(null);
+  useEffect(() => {
 
-    useEffect(()=>{
+    const token = localStorage.getItem("token");
+    const kitId = localStorage.getItem("kit_id");
 
-        if(!token) return;
+    if (!token || !kitId) {
+      setError("Not authenticated");
+      setLoading(false);
+      return;
+    }
 
-        const fetchReport = async ()=>{
+    const fetchReport = async () => {
+      try {
+        const res = await fetch(
+          `http://35.154.159.18:3000/api/report/${kitId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
-            try{
-                const res = await fetch(
-                  `http://127.0.0.1:8000/report?token=${token}`
-                );
+        if (!res.ok) {
+          throw new Error("Failed to fetch report");
+        }
 
-                // ⭐ VERY IMPORTANT
-                if(!res.ok){
-                    throw new Error(`Server Error: ${res.status}`);
-                }
+        const json = await res.json();
 
-                const json = await res.json();
-                setData(json);
+        if (!json.success) {
+          throw new Error(json.message);
+        }
 
-            }catch(err){
-                console.error("useReport error:", err);
-                setError(err);
-            }
-            finally{
-                setLoading(false);
-            }
-        };
+        setData(json);
 
-        fetchReport();
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    },[token]);
+    fetchReport();
 
-    return {data,loading,error};
+  }, []);
+
+  return { data, loading, error };
 }

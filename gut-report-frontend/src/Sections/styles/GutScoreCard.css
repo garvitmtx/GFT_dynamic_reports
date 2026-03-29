@@ -3,6 +3,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 20px;
+  padding-top: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -44,7 +45,6 @@
   background: linear-gradient(135deg, #D4E5E5 0%, #E8F2F2 100%);
   border-radius: 16px 16px 0 0;
   padding: 30px 30px;
-  /* margin-bottom: 20px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,22 +78,25 @@
 .microbe-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.scorecard-svg {
+  height: 72px;
 }
 
 .overall-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 /* Circular Score */
 .score-circle {
   display: none;
   position: relative;
   width: 140px;
   height: 140px;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -133,21 +136,27 @@
 .metric-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
-.metric-item-wrapper{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
+.metric-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* Description */
-.metric-desc{
-  font-size:0.9rem;
-  color:#6b7280;   /* medical grey */
-  line-height:1.45;
-  max-width:420px;
+.metric-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.45;
+  max-width: 420px;
+}
+
+p.metric-label{
+	font-size: 0.7rem;
+	font-style: italic;
+	margin: 0px;
 }
 .metric-title {
   font-size: 1.25rem;
@@ -234,6 +243,32 @@
   margin: 0;
 }
 
+/* Toxins Segmented Bar */
+.toxins-segmented-bar {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #1a1a1a;
+  margin-bottom: 16px;
+  gap: 2px;
+  background-color: #1a1a1a;
+}
+
+.toxin-segment {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.toxin-segment.shaded {
+  background-color: #A8727D;
+}
+
+.toxin-segment.unshaded {
+  background-color: #E5E7EB;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .metrics-grid {
@@ -280,6 +315,10 @@
   .section-title {
     font-size: 1.5rem;
   }
+
+  .toxins-segmented-bar {
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -297,5 +336,9 @@
 
   .metric-title {
     font-size: 1.1rem;
+  }
+
+  .toxins-segmented-bar {
+    height: 36px;
   }
 }

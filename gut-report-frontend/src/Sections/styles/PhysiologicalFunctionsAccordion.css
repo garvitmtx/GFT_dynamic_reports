@@ -1,5 +1,5 @@
-/* Accordion Container */
-.physiological-accordion-container {
+/* Physiological Functions New Container */
+.physiological-new-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -15,7 +15,7 @@
 }
 
 /* Accordion List */
-.accordion-list {
+.accordion-new-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -23,7 +23,7 @@
 }
 
 /* Accordion Item */
-.accordion-item {
+.accordion-new-item {
   background-color: #f9fafb;
   border-radius: 12px;
   overflow: hidden;
@@ -31,27 +31,17 @@
   width: 100%;
 }
 
-.accordion-item.expanded {
+.accordion-new-item.expanded {
   background-color: #ffffff;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.accordion-item.collapsed {
+.accordion-new-item.collapsed {
   opacity: 0.7;
 }
 
-.functions-header {
-  margin-bottom: 40px;
-}
-
-.functions-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 8px 0;
-}
 /* Accordion Header */
-.accordion-header {
+.accordion-new-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,16 +52,16 @@
   transition: padding 0.3s ease;
 }
 
-.accordion-item.expanded .accordion-header {
+.accordion-new-item.expanded .accordion-new-header {
   padding-bottom: 16px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.accordion-item.collapsed .accordion-header {
+.accordion-new-item.collapsed .accordion-new-header {
   padding: 16px 20px;
 }
 
-.header-left {
+.header-new-left {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -79,7 +69,7 @@
   min-width: 0;
 }
 
-.function-icon-wrapper {
+.function-new-icon-wrapper {
   width: 56px;
   height: 56px;
   background: linear-gradient(135deg, #D4E5E5 0%, #E8F2F2 100%);
@@ -91,22 +81,22 @@
   transition: all 0.3s ease;
 }
 
-.accordion-item.collapsed .function-icon-wrapper {
+.accordion-new-item.collapsed .function-new-icon-wrapper {
   width: 44px;
   height: 44px;
 }
 
-.accordion-item.collapsed .function-icon-wrapper svg {
+.accordion-new-item.collapsed .function-new-icon-wrapper svg {
   width: 24px;
   height: 24px;
 }
 
-.header-content {
+.header-new-content {
   flex: 1;
   min-width: 0;
 }
 
-.function-title {
+.function-new-title {
   font-size: 1.125rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -116,26 +106,30 @@
   text-overflow: ellipsis;
 }
 
-.accordion-item.collapsed .function-title {
+.accordion-new-item.collapsed .function-new-title {
   font-size: 0.95rem;
 }
 
-.function-description {
+.function-new-description {
   font-size: 0.9rem;
   color: #6b7280;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   transition: font-size 0.3s ease;
+  line-height: 1.4;
 }
 
-.accordion-item.collapsed .function-description {
+.accordion-new-item.collapsed .function-new-description {
   font-size: 0.8rem;
+  -webkit-line-clamp: 1;
 }
 
 /* Header Right */
-.header-right {
+.header-new-right {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -143,7 +137,7 @@
 }
 
 /* Badge Styling */
-.function-badge {
+.function-new-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -155,17 +149,17 @@
   transition: all 0.3s ease;
 }
 
-.accordion-item.collapsed .function-badge {
+.accordion-new-item.collapsed .function-new-badge {
   padding: 6px 10px;
   font-size: 0.75rem;
 }
 
-.badge-helpful {
+.badge-new-helpful {
   background-color: #D1F4E0;
   color: #0F6938;
 }
 
-.badge-harmful {
+.badge-new-harmful {
   background-color: #FFE5E5;
   color: #991B1B;
 }
@@ -175,18 +169,18 @@
   transition: width 0.3s ease, height 0.3s ease;
 }
 
-.accordion-item.collapsed .arrow-icon {
+.accordion-new-item.collapsed .arrow-icon {
   width: 12px;
   height: 12px;
 }
 
-.badge-text {
+.badge-new-text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* Expand Toggle Button */
-.expand-toggle {
+.expand-new-toggle {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -197,21 +191,21 @@
   transition: transform 0.3s ease;
 }
 
-.expand-toggle:hover {
+.expand-new-toggle:hover {
   background-color: #f3f4f6;
   border-radius: 4px;
 }
 
-.chevron {
+.chevron-new {
   transition: transform 0.3s ease;
 }
 
-.chevron.rotated {
+.chevron-new.rotated {
   transform: rotate(180deg);
 }
 
 /* Accordion Content */
-.accordion-content {
+.accordion-new-content {
   animation: slideDown 0.3s ease-out;
   overflow: hidden;
   width: 100%;
@@ -228,12 +222,12 @@
   }
 }
 
-.content-wrapper {
+.content-new-wrapper {
   padding: 20px 24px 24px;
   width: 100%;
 }
 
-.content-summary {
+.content-new-summary {
   font-size: 0.95rem;
   color: #374151;
   line-height: 1.6;
@@ -241,64 +235,22 @@
 }
 
 /* Content Grid */
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+.content-new-grid {
+  display: flex;
+  justify-content: center;
   width: 100%;
-}
-
-/* Key Findings Section */
-.key-findings-section {
-  width: 100%;
-}
-
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 16px 0;
-}
-
-.section-icon {
-  flex-shrink: 0;
-}
-
-.findings-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.finding-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #4b5563;
-  line-height: 1.5;
-}
-
-.check-icon {
-  flex-shrink: 0;
-  margin-top: 2px;
 }
 
 /* Chart Section */
-.chart-section {
+.chart-new-section {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
   width: 100%;
+  max-width: 800px;
 }
 
-.chart-data {
+.chart-new-data {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -306,60 +258,60 @@
   min-width: 0;
 }
 
-.data-row {
+.data-new-row {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.data-label {
+.data-new-label {
   font-size: 0.875rem;
   font-weight: 600;
   color: #1a1a1a;
 }
 
-.data-values {
+.data-new-values {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.data-control,
-.data-you {
+.data-new-control,
+.data-new-you {
   font-size: 0.85rem;
   color: #6b7280;
 }
 
-.data-control strong,
-.data-you strong {
+.data-new-control strong,
+.data-new-you strong {
   font-weight: 700;
   margin-left: 4px;
 }
 
-.data-you strong.positive {
+.data-new-you strong.positive {
   color: #0F6938;
 }
 
-.data-you strong.negative {
+.data-new-you strong.negative {
   color: #991B1B;
 }
 
 /* Bar Chart */
-.bar-chart {
+.bar-new-chart {
   display: flex;
   align-items: flex-end;
   height: 200px;
   flex-shrink: 0;
 }
 
-.bar-group {
+.bar-new-group {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: flex-end;
   height: 100%;
 }
 
-.bar-wrapper {
+.bar-new-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -368,22 +320,42 @@
   justify-content: flex-end;
 }
 
-.bar {
+.bar-new-stack {
   width: 60px;
-  border-radius: 6px 6px 0 0;
-  transition: height 0.5s ease;
-  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.bar-you {
+.bar-new-segment {
+  width: 100%;
+  transition: height 0.5s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-percentage-label {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.bar-helpful {
   background: linear-gradient(180deg, #4A7C7E 0%, #5BA3A3 100%);
 }
 
-.bar-control {
-  background: linear-gradient(180deg, #6B7280 0%, #9CA3AF 100%);
+.bar-harmful {
+  background: linear-gradient(180deg, #8B3D52 0%, #6B2C3E 100%);
 }
 
-.bar-label {
+.bar-new-label {
   font-size: 0.8rem;
   color: #6b7280;
   font-weight: 600;
@@ -391,216 +363,219 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .accordion-header {
+  .accordion-new-header {
     padding: 18px 20px;
   }
 
-  .content-grid {
+  .chart-new-section {
     gap: 24px;
   }
 
-  .bar {
+  .bar-new-stack {
     width: 50px;
   }
 }
 
 @media (max-width: 768px) {
-  .physiological-accordion-container {
+  .physiological-new-container {
     padding: 16px;
   }
 
-  .accordion-list {
+  .accordion-new-list {
     gap: 12px;
   }
 
-  .accordion-header {
+  .accordion-new-header {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
     gap: 12px;
   }
 
-  .accordion-item.collapsed .accordion-header {
+  .accordion-new-item.collapsed .accordion-new-header {
     flex-direction: row;
     align-items: center;
     padding: 12px 16px;
   }
 
-  .header-left {
+  .header-new-left {
     width: 100%;
   }
 
-  .header-right {
+  .header-new-right {
     width: 100%;
     justify-content: space-between;
   }
 
-  .accordion-item.collapsed .header-right {
+  .accordion-new-item.collapsed .header-new-right {
     width: auto;
     gap: 8px;
   }
 
-  .function-icon-wrapper {
+  .function-new-icon-wrapper {
     width: 48px;
     height: 48px;
   }
 
-  .accordion-item.collapsed .function-icon-wrapper {
+  .accordion-new-item.collapsed .function-new-icon-wrapper {
     width: 40px;
     height: 40px;
   }
 
-  .function-title {
+  .function-new-title {
     font-size: 1rem;
   }
 
-  .accordion-item.collapsed .function-title {
+  .accordion-new-item.collapsed .function-new-title {
     font-size: 0.9rem;
   }
 
-  .function-description {
+  .function-new-description {
     font-size: 0.85rem;
   }
 
-  .accordion-item.collapsed .function-description {
+  .accordion-new-item.collapsed .function-new-description {
     font-size: 0.75rem;
   }
 
-  .content-wrapper {
+  .content-new-wrapper {
     padding: 16px;
   }
 
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .chart-section {
+  .chart-new-section {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
   }
 
-  .bar-chart {
+  .bar-new-chart {
     width: 100%;
     justify-content: center;
   }
 
-  .bar {
+  .bar-new-stack {
     width: 70px;
+  }
+
+  .bar-new-group {
+    gap: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .physiological-accordion-container {
+  .physiological-new-container {
     padding: 12px;
   }
 
-  .accordion-header {
+  .accordion-new-header {
     padding: 14px 12px;
     gap: 10px;
   }
 
-  .accordion-item.collapsed .accordion-header {
+  .accordion-new-item.collapsed .accordion-new-header {
     padding: 10px 12px;
   }
 
-  .header-left {
+  .header-new-left {
     gap: 12px;
   }
 
-  .function-icon-wrapper {
+  .function-new-icon-wrapper {
     width: 44px;
     height: 44px;
   }
 
-  .function-icon-wrapper svg {
+  .function-new-icon-wrapper svg {
     width: 26px;
     height: 26px;
   }
 
-  .accordion-item.collapsed .function-icon-wrapper {
+  .accordion-new-item.collapsed .function-new-icon-wrapper {
     width: 36px;
     height: 36px;
   }
 
-  .accordion-item.collapsed .function-icon-wrapper svg {
+  .accordion-new-item.collapsed .function-new-icon-wrapper svg {
     width: 20px;
     height: 20px;
   }
 
-  .function-title {
+  .function-new-title {
     font-size: 0.95rem;
   }
 
-  .accordion-item.collapsed .function-title {
+  .accordion-new-item.collapsed .function-new-title {
     font-size: 0.85rem;
   }
 
-  .function-description {
+  .function-new-description {
     font-size: 0.8rem;
   }
 
-  .accordion-item.collapsed .function-description {
+  .accordion-new-item.collapsed .function-new-description {
     font-size: 0.7rem;
   }
 
-  .function-badge {
+  .function-new-badge {
     padding: 6px 10px;
     font-size: 0.75rem;
   }
 
-  .accordion-item.collapsed .function-badge {
+  .accordion-new-item.collapsed .function-new-badge {
     padding: 4px 8px;
     font-size: 0.7rem;
   }
 
-  .badge-text {
+  .badge-new-text {
     display: -webkit-box;
-    line-clamp: 2;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .content-wrapper {
+  .content-new-wrapper {
     padding: 14px 12px;
   }
 
-  .content-summary {
+  .content-new-summary {
     font-size: 0.875rem;
   }
 
-  .finding-item {
-    font-size: 0.85rem;
-  }
-
-  .data-label {
+  .data-new-label {
     font-size: 0.8rem;
   }
 
-  .data-control,
-  .data-you {
+  .data-new-control,
+  .data-new-you {
     font-size: 0.8rem;
   }
 
-  .bar {
+  .bar-new-stack {
     width: 60px;
   }
 
-  .bar-chart {
+  .bar-new-chart {
     height: 180px;
+  }
+
+  .bar-new-group {
+    gap: 20px;
+  }
+
+  .bar-percentage-label {
+    font-size: 0.75rem;
   }
 }
 
 /* Prevent horizontal overflow */
-.physiological-accordion-container,
-.accordion-list,
-.accordion-item,
-.accordion-header,
-.accordion-content,
-.content-wrapper,
-.content-grid,
-.key-findings-section,
-.chart-section {
+.physiological-new-container,
+.accordion-new-list,
+.accordion-new-item,
+.accordion-new-header,
+.accordion-new-content,
+.content-new-wrapper,
+.content-new-grid,
+.chart-new-section {
   max-width: 100%;
   overflow-x: hidden;
 }

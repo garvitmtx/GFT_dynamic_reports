@@ -52,11 +52,11 @@
 
 /* Icon Wrapper */
 .function-icon-wrapper {
+  display: flex;
   width: 56px;
   height: 56px;
   background: linear-gradient(135deg, #D4E5E5 0%, #E8F2F2 100%);
   border-radius: 12px;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
@@ -72,7 +72,7 @@
 }
 
 /* Badge Styling */
-.function-badge {
+.toxin-function-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -84,13 +84,13 @@
 }
 
 .badge-helpful {
-  background-color: #D1F4E0;
-  color: #0F6938;
+  background-color: #ececec;
+  color: #090909;
 }
 
 .badge-harmful {
-  background-color: #FFE5E5;
-  color: #991B1B;
+  background-color: #ececec;
+  color: #090909;
 }
 
 .arrow-icon {
@@ -106,7 +106,9 @@
 }
 
 .badge-text {
-  white-space: nowrap;
+    white-space: normal;       /* allow wrapping */
+  word-break: break-word;    /* break long words if needed */
+  overflow-wrap: break-word;
 }
 
 /* Responsive Design */

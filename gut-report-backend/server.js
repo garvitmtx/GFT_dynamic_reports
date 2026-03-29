@@ -100,7 +100,9 @@ app.get("/api/report/:kit_id", authenticateToken, async (req, res) => {
     }
 
     const [rows] = await pool.execute(
-      `SELECT report_json FROM gft_reports WHERE kit_id = ?`,
+      `SELECT report_json, report_created_on 
+       FROM gft_reports 
+       WHERE kit_id = ?`,
       [kit_id]
     );
 
@@ -110,9 +112,15 @@ app.get("/api/report/:kit_id", authenticateToken, async (req, res) => {
         message: "Report not found",
       });
     }
-
+	const formattedDate = new Date(rows[0].report_created_on)
+	.toLocaleDateString("en-GB", {
+		day: "2-digit",
+		month: "short",
+		year: "numeric",
+	});
     return res.json({
       success: true,
+      date: formattedDate,
       report: rows[0].report_json,
     });
 
@@ -124,6 +132,7 @@ app.get("/api/report/:kit_id", authenticateToken, async (req, res) => {
     });
   }
 });
+
 
 
 /* -----------------------------------------

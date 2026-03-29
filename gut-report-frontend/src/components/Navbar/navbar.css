@@ -111,8 +111,8 @@
 ================================ */
 
 .signin-btn{
-	display: none;
-    /* background:#0f766e; */
+	/* display: none; */
+    background:#0f766e;
     color:white;
 
     border:none;
@@ -127,10 +127,10 @@
     transition:all .25s ease;
 }
 
-/* .signin-btn:hover{
+.signin-btn:hover{
     background:#0d5f59;
     transform:translateY(-1px);
-} */
+}
 
 
 
