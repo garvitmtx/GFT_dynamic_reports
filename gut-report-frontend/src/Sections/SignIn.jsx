@@ -13,7 +13,7 @@ export default function SignIn() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/verify-customer", {
+      const res = await fetch("http://35.154.159.18:3000/api/verify-customer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
